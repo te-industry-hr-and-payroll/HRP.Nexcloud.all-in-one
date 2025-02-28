@@ -105,3 +105,12 @@ spec:
         - name: nextcloud-aio-apache
           persistentVolumeClaim:
             claimName: nextcloud-aio-apache
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+            matchExpressions:
+            - key: io.kompose.service
+              operator: In
+              values:
+              - nextcloud-aio-nextcloud
