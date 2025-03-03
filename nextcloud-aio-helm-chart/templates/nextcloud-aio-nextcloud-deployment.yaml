@@ -12,7 +12,6 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: nextcloud-aio-nextcloud
-      deploy-with: nc
   strategy:
     type: Recreate
   template:
@@ -243,3 +242,4 @@ spec:
               operator: In
               values:
               - apache
+              - nc
