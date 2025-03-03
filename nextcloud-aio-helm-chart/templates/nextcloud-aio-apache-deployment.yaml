@@ -109,6 +109,7 @@ spec:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
+            topologyKey: kubernetes.io/hostname
             matchExpressions:
             - key: io.kompose.service
               operator: In
