@@ -9,7 +9,6 @@ metadata:
   namespace: "{{ .Values.NAMESPACE }}"
 spec:
   ipFamilyPolicy: PreferDualStack
-  externalTrafficPolicy: Local
   ports:
     - name: "{{ .Values.APACHE_PORT }}"
       port: {{ .Values.APACHE_PORT }}
