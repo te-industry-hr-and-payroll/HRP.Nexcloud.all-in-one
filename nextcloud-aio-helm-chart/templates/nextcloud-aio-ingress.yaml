@@ -29,6 +29,6 @@ spec:
               service:
                 name: nextcloud-aio-apache
                 port: 
-                  number: {{ .Values.APACHE_PORT }}
+                  number: {{ .port }}
           {{- end }}
     {{- end }}
