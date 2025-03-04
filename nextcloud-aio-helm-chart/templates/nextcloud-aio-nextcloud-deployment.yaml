@@ -233,14 +233,3 @@ spec:
         - name: nextcloud-aio-nextcloud-trusted-cacerts
           persistentVolumeClaim:
             claimName: nextcloud-aio-nextcloud-trusted-cacerts
-      affinity:
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-            topologyKey: kubernetes.io/hostname
-            matchExpressions:
-            - key: deploy-with
-              operator: In
-              values:
-              - apache
-              - nc
