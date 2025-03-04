@@ -5,6 +5,7 @@ metadata:
     kompose.version: 1.35.0 (9532ceef3)
   labels:
     io.kompose.service: nextcloud-aio-nextcloud
+    deploy-with: nc
   name: nextcloud-aio-nextcloud
   namespace: "{{ .Values.NAMESPACE }}"
 spec:
