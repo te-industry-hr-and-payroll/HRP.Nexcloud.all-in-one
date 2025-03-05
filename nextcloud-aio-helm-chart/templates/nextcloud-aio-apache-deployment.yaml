@@ -112,9 +112,5 @@ spec:
           requiredDuringSchedulingIgnoredDuringExecution:
           - labelSelector:
             topologyKey: kubernetes.io/hostname
-            matchExpressions:
-            - key: deploy-with
-              operator: In
-              values:
-              - nc
-              - apache
+            matchLabels:
+              name: nextcloud-aio-nextcloud
